@@ -9,14 +9,14 @@ export const saveToJSON = (data: any) => {
     a.click();
 }
 
-export const loadFromJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
+export const loadFromJSON = (file : Blob) => {
     return new Promise((resolve, reject) => {
-        if (e.target.files === null)
+        if (file == null)
             return;
         let reader = new FileReader();
         reader.onloadend = function () {
             resolve(JSON.parse(reader.result as string));
         }
-        reader.readAsText(e.target.files![0]);
+        reader.readAsText(file);
     });
 }

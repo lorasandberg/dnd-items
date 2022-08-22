@@ -7,9 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#sidebar {
+  background-color: hsl(10deg, 80%, 40%);
+  padding: 10px;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+main {
+  margin-left: 250px;
+  padding: 20px;
+  max-width: calc(100% - 250px);
+}
+
+main table {
+  width: 100%;
 }
 
 table td {
@@ -46,4 +63,41 @@ table td.description {
 td.description > div {
   height: 80px;
   overflow-y: auto;
+}
+
+.search {
+  text-align: center;
+}
+.search input {
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.dropzone {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  border: dashed 3px #a0a0a0;
+  text-align: center;
+  line-height: 300px;
+  margin-top: 25vh;
+
+  font-size: 2em;
+  color: #a0a0a0;
+}
+
+.save {
+  position: fixed;
+  bottom: 10px;
+  width: 230px;
+}
+
+.save button {
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
 }
